@@ -1,7 +1,7 @@
 {
   "name": "tech",
   "version": "1.0.0",
-  "description": "",
+  "description": "Feature: to fill out a form to create a dish for in your menu screen",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
