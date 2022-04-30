@@ -5,18 +5,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dish Exchange</title>
+    <title>Your Menu</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header>
-
+        <!--Title and filter button-->
+        <h1>Your menu</h1>
+        <button>
+            <img src="" alt="filter icon button">
+        </button>
     </header>
 
-    <main>
-        
+    <main id="your-menu">
+        <h2><span id="total-dishes "></span>dishes</h2>
+        <!--use javascript to print the amount of enabled-dishes  -->
+        <p><span id="enabled-dishes"></span>dishes currently enabled in your menu</p>
+
+        <article id="dish">
+            <h3 id="dish-name"></h3>
+            <!--ingredient-->
+            <p id="ingredient"></p>
+            <!--quality also contains an image with a star rating, hence the use of span-->
+            <p id="quality">Quality<span></span></p>
+            <!--toggle to enable = enable it in your menu or disable it in your menu -->
+            <div id="toggle"></div>
+        </article>
+
+        <!--floating action button that leads you to a different page-->
+        <a href="" id="floating-action-button"><img src="" alt="floating action button to add a dish"></a>
     </main>
+    
+    <!--The nav is on the bottom of the screen, consisting out of icons-->
+    <nav>
+        <a href="#"><img src="#" alt="matching screen page icon"></a>
+        <a href="#"><img src="#" alt="your menu page icon"></a>
+        <a href="#"><img src="#" alt="home screen page icon"></a>
+        <a href="#"><img src="#" alt="my preferences page icon"></a>
+        <a href="#"><img src="#" alt="my profile page icon"></a>
+    </nav>
     
     <script src="./scripts/script.js"></script>
 </body>
