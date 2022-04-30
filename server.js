@@ -2,9 +2,7 @@ const express = require('express')
 const app = express()
 
 app.get('/', function (req, res) {
-  res.send('Hello Wwwworlddd')
+  res.send('Hello Woooorld')
 })
 
-app.listen(8080) 
-
-//werkt automatisch vanwege nodemon
+app.listen(3000)
