@@ -1,3 +1,37 @@
+*,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+/*****CUSTOM COLORS*****/
+:root {
+  --bg-color: #f3f3f3;
+  --light-bg-color: #ffffff;
+
+  --text-color: #4f4f4f;
+  --light-text-color: #c5c5c5;
+
+  --primary-color: #41c1a5;
+  --secondary-color: #fcab61;
+
+  --quality-filled: #fcbe61;
+  --quality-not-filled: #c5c5c5;
+
+  --empty-image: #dcdcdc;
+}
+
 body {
-    background-color: rgb(253, 144, 168);
+  background-color: rgb(253, 144, 168);
+}
+
+/*****TEXT STYLING*****/
+h1 {
+  font-weight: 400;
+}
+
+h2,
+h3 {
+  font-weight: 700;
 }
