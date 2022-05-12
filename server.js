@@ -75,7 +75,7 @@ app.get("/dishes/:dishId", (req,res) => {
   })
 })
 
-//error 404 pagina voor elke route die niet bestaat
+//error 404 page for every route that doesn't exists
 app.get("*", (req, res) => {
   res.render ("pages/404")
   });
