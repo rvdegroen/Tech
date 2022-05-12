@@ -10,11 +10,11 @@ I'm using the GNU General Public License v3.0 so please keep this in mind if you
 
 # Dish Exchange
 
-For this course, we're meant to make a feature of matching application. My matching application is called "Dish Exchange". Conceptually it's an app in which users can sign themselves up for and they can add their own dishes to their accounts, they would like to trade with others. You can then match with other people's dishes, contact them and talk about the dish exchange that will possibly take place. You are also able to set preferences. 
+For this course, I'm meant to make a feature of my own matching application. My matching application is called "Dish Exchange". Conceptually it's an app in which users can sign themselves up for and they can add their own dishes to their accounts, they would like to trade with others. You can then match with other people's dishes, contact them and talk about the dish exchange that will possibly take place. You are also able to set preferences. 
 
 ## The feature I will make
 
-For this course, you're not meant to make the entire app, because we would need a lot more time for that than we currently have, so the assignment is to make one of the features in my concept. 
+For this course, I'm not meant to make the entire app, because we would need a lot more time for that than we currently have, so the assignment is to make one of the features in my concept. 
 
 The feature I will make is being able to add dishes to your menu, display them and being able to see the detail page of a dish. If I were to have more time left, I would also like to work on being able to edit the dish you created. 
 
