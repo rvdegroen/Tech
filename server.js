@@ -39,6 +39,7 @@ app.set("view engine", "ejs")
 //express knows all of my static files are in my static folder
 app.use(express.static("static"))
 
+
 ////ROUTES////
 
 //this is to render my dishes.js/homepage file
@@ -47,7 +48,7 @@ app.get("/", (req, res) => {
     //this is an object, in here I can define any variable that will be used in he template
 
     //totalDishes should actually be read from how many dishCard.ejs there are in the server
-    totalDishes: 2,
+    totalDishes: 5,
   })
 })
 
