@@ -1,7 +1,9 @@
-<a href="/dishes/<%= dishId %>">
+<!--this is a clickable dish card I'll use on dishes.ejs, every dish has their own id-->
+
+<a href="/dishes/<%=dishId%>">
     <article>
-        <h3><%= dishName %></h3>
-        <p><%= dishIngredients %></p>
-        <p>Quality: <%= dishQuality %></p>
+        <h3><%=dishName%></h3>
+        <p><%=dishIngredients%></p>
+        <p><%=dishQuality%></p>
     </article>
 </a>

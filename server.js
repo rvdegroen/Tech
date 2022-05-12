@@ -1,3 +1,5 @@
+////VARIABLES////
+
 const express = require("express")
 const app = express()
 
@@ -20,60 +22,50 @@ const database = [
     dishIngredients: "sesame oil, leafz vegetable, ground pork",
     dishQuality: 1,
     dishId: 3,
+  },
+  {
+    
   }
 ]
 
-///////////////////////////////////////
-/////////////CONFIGURATION/////////////
-///////////////////////////////////////
+////CONFIGURATION////
 
 //app.set tells express that when I'm using templates, like ejs, it should look for them in the views folder
 app.set("views", "./views")
 //tells that while using templates, it should render them using ejs
 app.set("view engine", "ejs") 
 
-//////////////////////////////////////
-//////////////MIDDLEWARE//////////////
-//////////////////////////////////////
-
-//express knows that now all of my static files are in my static folder
-//to use paths in my html, I can put a / behind the path to folder
+////MIDDLEWARE////
+//express knows all of my static files are in my static folder
 app.use(express.static("static"))
 
-//////////////////////////////////////
-////////////////ROUTES////////////////
-//////////////////////////////////////
+////ROUTES////
 
-//this is to render my index.js file
+//this is to render my dishes.js/homepage file
 app.get("/", (req, res) => {
   res.render("pages/dishes", {
     //this is an object, in here I can define any variable that will be used in he template
-    numberOfDishes: 2,
+
+    //totalDishes should actually be read from how many dishCard.ejs there are in the server
+    totalDishes: 2,
   })
 })
 
-//dishId is a variable with a value every dish has (look at dishes.ejs), : is for parameters
-app.get("/dishes/:dishId", (req, res) => {
-  // 1. save the id in a variable (from the url) as a NUMBER (url is a string so put number before req.params.dishId)
-  const dishIdFromUrl = Number(req.params.dishId)
+//this is to render my addDish.js file
+app.get("/addDish", (req, res) => {
+  res.render("pages/addDish", {
+    //this is an object, in here I can define any variable that will be used in he template
+  })
+})
 
-  // 2. find the dish information using the id
-  const dish = database.find((oneOfTheDishes) => dishIdFromUrl === oneOfTheDishes.dishId)
-
-  /* "simpler" way to write this code:
-    const dish = database.find(function (oneOfTheDishes) {
-      if (dishId === oneOfTheDishes.dishId) return true;
-      return false;
-    })
-
-    let foundDish;
-    for (let dish of database){
-      if (dishIdFromUrl === dish.dishId) {
-        foundDish = dish
-      }
-    }
-  */
-
+//this is to render a dish.js file, which is different depending on the id information 
+//:dishId is a parameter/variable with a value for a dish (see dishes.ejs & dishCard.ejs). I want to use dishId to show the right page for dish
+app.get("/dishes/:dishId", (req,res) => {
+  //1. save the id in a variable, from the url as a NUMBER, because an url is a string & put number before (req.params.dishId)
+  //req.params.[VARIABLE] = searches the url path for the specified parameter
+  const dishIdUrl = Number(req.params.dishId)
+  //2. find the dish information using the id 
+  const dish = database.find((oneOfDishes) => dishIdUrl === oneOfDishes.dishId)
   // 3. send the dish information to the template
   res.render("pages/dish", {
     dishName: dish.dishName,
@@ -81,6 +73,11 @@ app.get("/dishes/:dishId", (req, res) => {
     dishQuality: dish.dishQuality,
   })
 })
+
+//error 404 pagina voor elke route die niet bestaat
+app.get("*", (req, res) => {
+  res.render ("pages/404")
+  });
 
 //localhost:3000
 app.listen(3000)
