@@ -1,0 +1,20 @@
+{
+  "name": "dish-exchange",
+  "version": "1.0.0",
+  "description": "A feature of the concept dish exchange to add a dish to your menu",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rvdegroen/Tech.git"
+  },
+  "author": "Roshnie de Groen",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/rvdegroen/Tech/issues"
+  },
+  "homepage": "https://github.com/rvdegroen/Tech#readme"
+}
