@@ -1,5 +1,7 @@
-////VARIABLES////
+// this makes variables from .env file available in my code
+require('dotenv').config()
 
+////VARIABLES////
 const express = require("express")
 const app = express()
 
