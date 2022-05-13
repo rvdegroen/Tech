@@ -33,7 +33,8 @@ To be able to use my application you will need a few things:
 
 1. Open Linux in the terminal and be in a folder where you want my application to be in
 2. Find the link of my repository - You can find the link on top of my repo where it says `code` and you can copy it with the copy icon
-3. Type `git clone [LINK OF MY REPOSITORY]` and insert the link of my repo in `[LINK OF MY REPOSITORY]`
-4. Type `npm run dev` which will run nodemon 
-5. Type `localhost:3000` as an URL in the browser 
-6. Enjoy my application 😊
+4. Type `git clone [LINK OF MY REPOSITORY]` and insert the link of my repo in `[LINK OF MY REPOSITORY]`
+5. Type `npm install` to install all dependencies of my application 
+6. Type `npm run dev` which will run nodemon 
+7. Type `localhost:3000` as an URL in the browser 
+8. Enjoy my application 😊
