@@ -38,3 +38,5 @@ To be able to use my application you will need a few things:
 6. Type `npm run dev` which will run nodemon 
 7. Type `localhost:3000` as an URL in the browser 
 8. Enjoy my application 😊
+
+(I think I'm missing something about putting your information in a .env (sample) file so you can actually use the application)
