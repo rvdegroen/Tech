@@ -2,8 +2,12 @@
 require('dotenv').config()
 
 ////VARIABLES////
+const { MongoClient } = require('mongodb')
 const express = require("express")
 const app = express()
+
+//connection to my mongoDB database, I used this link https://medium.com/@shashankdrolia421/how-to-connect-mongodb-atlas-with-node-js-in-just-5-simple-steps-83bf28309bd4
+
 
 // temporary data for testing: array of objects of each dish
 const database = [
@@ -11,7 +15,7 @@ const database = [
     dishName: "Thai green curry",
     dishIngredients: "coconut milk, sugar, chicken, fish sauce",
     dishQuality: 3,
-    imgSource: "static/images/thai-green-curry.svg",
+    imgSource: "/static/images/Thai-Green-Curry_5",
     imgAlt: "picture of thai green curry",
     dishId: 1,
   },
@@ -19,7 +23,7 @@ const database = [
     dishName: "Spring rolls with peanut sauce",
     dishIngredients: "thin rice noodles, butter lettuce, red cabbage",
     dishQuality: 2,
-    imgSource: "static/images/thai-green-curry.svg",
+    imgSource: "static/images/Thai-Green-Curry_5",
     imgAlt: "picture of thai green curry",
     dishId: 2,
   },
@@ -27,7 +31,7 @@ const database = [
     dishName: "Chinese dumplings",
     dishIngredients: "sesame oil, leafz vegetable, ground pork",
     dishQuality: 1,
-    imgSource: "static/images/thai-green-curry.svg",
+    imgSource: "static/images/Thai-Green-Curry_5",
     imgAlt: "picture of thai green curry",
     dishId: 3,
   },
