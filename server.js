@@ -6,8 +6,7 @@ const { MongoClient } = require('mongodb')
 const express = require("express")
 const app = express()
 
-//connection to my mongoDB database, I used this link https://medium.com/@shashankdrolia421/how-to-connect-mongodb-atlas-with-node-js-in-just-5-simple-steps-83bf28309bd4
-
+//connection to my mongoDB database
 
 
 ////CONFIGURATION////
