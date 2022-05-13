@@ -2,12 +2,10 @@
 require('dotenv').config()
 
 ////VARIABLES////
-const { MongoClient } = require('mongodb')
 const express = require("express")
 const app = express()
 
 //connection to my mongoDB database
-
 
 ////CONFIGURATION////
 
@@ -37,22 +35,6 @@ app.get("/", (req, res) => {
 app.get("/addDish", (req, res) => {
   res.render("pages/addDish", {
     //this is an object, in here I can define any variable that will be used in he template
-  })
-})
-
-//this is to render a dish.js file, which is different depending on the id information 
-//:dishId is a parameter/variable with a value for a dish (see dishes.ejs & dishCard.ejs). I want to use dishId to show the right page for dish
-app.get("/dishes/:dishId", (req,res) => {
-  //1. save the id in a variable, from the url as a NUMBER, because an url is a string & put number before (req.params.dishId)
-  //req.params.[VARIABLE] = searches the url path for the specified parameter
-  const dishIdUrl = Number(req.params.dishId)
-  //2. find the dish information using the id 
-  const dish = database.find((oneOfDishes) => dishIdUrl === oneOfDishes.dishId)
-  // 3. send the dish information to the template
-  res.render("pages/dish", {
-    dishName: dish.dishName,
-    dishIngredients: dish.dishIngredients,
-    dishQuality: dish.dishQuality,
   })
 })
 
