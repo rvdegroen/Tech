@@ -1,0 +1,2 @@
+# eslint will ignore the following files
+.env
