@@ -6,5 +6,9 @@
 
   <body>
     <h1><%-include('../partials/back');%>Add a Dish</h1>
+    <form action="/add-dish" method="POST">
+      <input type="text" name="dishName" placeholder="Name of the dish" />
+      <input type="submit" />
+    </form>
   </body>
 </html>
