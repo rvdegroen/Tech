@@ -23,7 +23,7 @@ app.set("view engine", "ejs");
 // express knows all of my static files are in my static folder
 app.use(express.static("static"));
 
-// to make my server run
+// test to find one specific dish
 const getDishes = async () => {
   // open database dishExchange
   const database = client.db("dishExchange");
