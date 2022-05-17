@@ -23,6 +23,8 @@ app.set("view engine", "ejs");
 // express knows all of my static files are in my static folder
 app.use(express.static("static"));
 
+// FUNCTIONS
+
 // test to find one specific dish
 const getDishes = async () => {
   // open database dishExchange
@@ -35,6 +37,8 @@ const getDishes = async () => {
 
   console.log(dish);
 };
+
+// ROUTES
 
 // error 404 page for every route that doesn't exists
 app.get("*", (req, res) => {
