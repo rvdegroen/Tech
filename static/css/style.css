@@ -46,14 +46,7 @@ p {
 }
 
 /*****SPECIFIC TEXT STYLING***/
-.h3DishCard {
-  padding: 20px 20px 10px 20px;
-}
 
-.pDishCard {
-  padding: 0 20px 10px 20px;
-}
-
-.qualityDishCard {
-  font-size: 0.9em;
+.backButton {
+  border-bottom: 1px black solid;
 }
