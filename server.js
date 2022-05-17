@@ -10,7 +10,6 @@ const app = express();
 // Connection URL to my database
 const url = process.env.DATABASE_URL;
 const client = new MongoClient(url);
-
 client.connect();
 
 // CONFIGURATION
@@ -25,7 +24,7 @@ app.use(express.static("static"));
 
 // FUNCTIONS
 
-// test to find one specific dish
+// test function to find one specific dish
 const getDishes = async () => {
   // open database dishExchange
   const database = client.db("dishExchange");
@@ -40,11 +39,27 @@ const getDishes = async () => {
 
 // ROUTES
 
-// error 404 page for every route that doesn't exists
+// 1. homepage to show all dishes
+app.get("/", (req, res) => {
+  res.render("pages/dishes");
+});
+
+// 2. page to add a dish to the database
+app.get("/add-dish", (req, res) => {
+  res.render("pages/addDish");
+});
+
+// 3. detail page of the dish (or the dish you might have just added)
+app.get("/dish/:dishId", (req, res) => {
+  res.render("pages/dish");
+});
+
+// 4. error 404 page for every route that doesn't exists
 app.get("*", (req, res) => {
   getDishes();
   res.render("pages/404");
 });
 
 // use the port on the env file if it exists, otherwise use port 3000
-app.listen(process.env.PORT || 3000);
+// app.listen(process.env.PORT || 3000);
+app.listen(8000);
