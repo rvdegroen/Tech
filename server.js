@@ -84,5 +84,5 @@ app.get("*", (req, res) => {
 });
 
 // use the port on the env file if it exists, otherwise use port 3000
-// app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3000);
 app.listen(8000);
